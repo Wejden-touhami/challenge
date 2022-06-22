@@ -16,7 +16,9 @@
 
 
 
-    4.3  Tester la méthode /v2/profile/picture/f/{id}: pour récupérer les photos de profils   ![image](https://user-images.githubusercontent.com/77793990/175174995-26c37695-ba63-4663-96e9-3694550b97ce.png)
+   4.3 Tester la méthode /v2/profile/picture/f/{id}: pour récupérer les photos de profils   
+   
+   ![image](https://user-images.githubusercontent.com/77793990/175174995-26c37695-ba63-4663-96e9-3694550b97ce.png)
 
 
 5.  Au niveau de l'application j'ai créé les dossiers : 

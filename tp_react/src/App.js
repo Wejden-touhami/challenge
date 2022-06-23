@@ -8,13 +8,13 @@ import {
 
 
 
-import CoachHomePage from "./pages/coachDashboard/CoachHomePage";
+import HomePage from "./pages/HomePage";
 function App() {
     return (
       <Router>
         <Switch>
         <Route exact path="/">
-            <CoachHomePage />
+            <HomePage />
           </Route>
     
         </Switch>

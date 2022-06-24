@@ -3,7 +3,7 @@
 /* eslint-disable react/jsx-no-undef */
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable react/no-unstable-nested-components */
-/* eslint-disable react/no-unstable-nested-components */
+
 import React, {useEffect, useState} from "react";
 import { Card, Row, Col , Input } from "antd";
 
@@ -23,6 +23,8 @@ const { Search } = Input;
     const fetchData = async () => {
       const result = await SearchService.Searchall("https://api.uprodit.com/v1/search/all?usecase=perso&startIndex=0&maxResults=1");
       const resultF =await SearchService.fetchSearch(searchValue , result);
+      
+      
       if (!didCancel) {
         setSearchval(resultF);
         console.log(Searchval.image_id)
@@ -36,7 +38,7 @@ const { Search } = Input;
   }, [searchValue]
     
   );
-   async function getImage (id){
+  async function getImage (id){
   const image = await SearchService.Searchall(`https://api.uprodit.com/v2/profile/picture/f/${ id}`);
   await SearchService.SearchImage( id,image).then((data)=>{
     setPhoto(data.b64Content)
@@ -58,9 +60,9 @@ const { Search } = Input;
         Searchval.map((user) =>
         
        (
+        
  <div> 
-
-       {/* { getImage(user.image_id)} */}
+  <button onClick={getImage(user.image_id)}></button>  
           <Card
     style={{
       width: 300,
